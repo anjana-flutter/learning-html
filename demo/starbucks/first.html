@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <link rel="stylesheet" href="first.css">
+    </header>
+    <body>
+        <section>
+            <div class="circle"></div>
+            <header>
+                <a href="#"><img src="image/logo.png"></a>
+                <ul>
+                    <li><a href="">HOME</a></li>
+                    <li><a href="">MENU</a></li>
+                    <li><a href="">WHAT'S NEW</a></li>
+                    <li><a href="">CONTACT</a></li>
+                </ul>
+            </header>
+            <div class="content">
+                <div class="textbox">
+                    <h2> It's not just Coffee <br> <span> Starbucks</span></h2>
+                    <p>
+                        Dreaming is one thing, but when the moment is right, you have to be ready to leave your familiar life and start searching for your own sound. 
+                    </p> 
+                    <a href="">Learn More</a>         
+                       
+                </div>
+                <div id="div1" class="hidden testdummy">
+                    <div class="imageBox">                  
+                        <img src="image/img1.png" class="Starbucks">
+  </div>
+                </div>
+                <div id="div2"class="hidden testdummy">
+                    <div class="imageBox">                  
+                          <img src="image/img2.png" class="Starbucks1">
+    </div>
+                </div>
+                <div id="div3"class="hidden testdummy">
+                    <div class="imageBox">                  
+                        <img src="image/img3.png" class="Starbucks2">
+  </div>
+                </div>
+            </div>
+            <ul class="thumb">
+                <li><img type="button" src="image/thumb1.png" onclick="showDiv('div1')"></li>
+                <li><img type="button" src="image/thumb2.png" onclick="showDiv('div2')"></li>
+                <li><img type="button" src="image/thumb3.png" onclick="showDiv('div3')"></li>
+            </ul>
+            <ul class="sci">
+                <li><a href=""><img src="image/facebook.png"></a></li>
+                <li><a href=""><img src="image/twitter.png"></a></li>
+                <li><a href=""><img src="image/instagram.png"></a></li>
+            </ul>
+        </section>
+
+
+        <script type="text/javascript">
+            // script.js
+function showDiv(id) {
+  // Hide all divs
+//   window.reload();
+  hideAllDivs();
+ 
+  // Show the selected div
+  const selectedDiv = document.getElementById(id);
+  if (selectedDiv) {
+    selectedDiv.classList.remove('hidden');
+  }
+}
+ 
+function hideAllDivs() {
+  // Hide all divs
+  const allDivs = document.querySelectorAll('.testdummy');
+  console.log(allDivs,'checking all divS')
+  allDivs.forEach(div => {
+    div.classList.add('hidden');
+  });
+}
+
+
+        </script>
+
+    </body>
+</html>
