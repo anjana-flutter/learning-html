@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="table.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selectable Rows Example</title>
+</head>
+<body>
+<div class="main-div">
+<center>
+  <table>
+
+    <thead>
+      <tr>
+        <th></th>
+        <th>Drink</th>
+        <th>Day1</th>
+        <th>Day2</th>
+        <th>Day3</th>
+      </tr>
+    </thead>
+
+    <tbody>
+
+      <tr onclick="selectRow(this)">
+        <td> </td>
+        <td>Boost</td>
+        <td>1Cup</td>
+        <td>1Cup</td>
+        <td>1Cup</td>
+      </tr>
+
+      <tr onclick="selectRow(this)">
+        <td> </td>
+        <td>Bournvita </td>
+        <td>2Cup</td>
+        <td>1Cup</td>
+        <td>1Cup</td>
+      </tr>
+
+      <tr onclick="selectRow(this)">
+        <td> </td>
+        <td>Horlicks </td>
+        <td>3cup</td>
+        <td>1Cup</td>
+        <td>1Cup</td>
+      </tr>
+      
+    </tbody>
+  </table>
+</center>
+
+  <script>
+    function selectRow(we) {
+
+      var rows = document.querySelectorAll('tr');
+      rows.forEach(function(row) {
+        row.classList.remove('selected');
+      });
+
+      we.classList.toggle('selected');
+    }
+  </script>
+</div>
+</body>
+</html>

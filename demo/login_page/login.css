@@ -4,13 +4,14 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "poppins" , sans-serif;
+    /* background-color: black; */
 }
 body{
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url('https://www.designbolts.com/wp-content/uploads/2018/01/Purple-Sky-Laptop-HD-WallPaper-1920-x-1080-px-1.jpg') 
+    background: url('') 
     no-repeat;
     background-size:cover ;
     background-position: center;
